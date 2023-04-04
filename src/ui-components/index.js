@@ -4,9 +4,6 @@
  * Any changes to this file will be overwritten when running amplify pull. *
  **************************************************************************/
 
-export { default as Search } from "./Search";
-export { default as Title } from "./Title";
-export { default as Component1 } from "./Component1";
 export { default as studioTheme } from "./studioTheme";
 export { default as UsersCreateForm } from "./UsersCreateForm";
 export { default as UsersUpdateForm } from "./UsersUpdateForm";
