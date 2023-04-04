@@ -15,11 +15,11 @@
       "auth": {
         "huemanstestb5b321f8": {}
       },
-      "api": {
-        "huemanstest": {}
-      },
       "storage": {
         "imagestorage": {}
+      },
+      "api": {
+        "huemanstest": {}
       }
     }
   }
