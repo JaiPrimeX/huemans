@@ -20,8 +20,6 @@ export declare type SearchOverridesProps = {
     Vector1109?: PrimitiveOverrideProps<IconProps>;
 } & EscapeHatchProps;
 export declare type SearchProps = React.PropsWithChildren<Partial<FlexProps> & {
-    SearchUsers?: React.ReactNode;
-} & {
     overrides?: SearchOverridesProps | undefined | null;
 }>;
 export default function Search(props: SearchProps): React.ReactElement;

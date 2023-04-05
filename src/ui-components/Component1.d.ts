@@ -35,8 +35,8 @@ export declare type Component1OverridesProps = {
     "1K Peoples146"?: PrimitiveOverrideProps<FlexProps>;
     "Rectangle 12147"?: PrimitiveOverrideProps<ImageProps>;
     "Frame 8148"?: PrimitiveOverrideProps<FlexProps>;
-    "56 Houses"?: PrimitiveOverrideProps<TextProps>;
-    "Sold Monthly"?: PrimitiveOverrideProps<TextProps>;
+    "1000+ Businesses"?: PrimitiveOverrideProps<TextProps>;
+    "Promoted Weekly"?: PrimitiveOverrideProps<TextProps>;
     "1K Peoples151"?: PrimitiveOverrideProps<FlexProps>;
     "Ellipse 6152"?: PrimitiveOverrideProps<IconProps>;
     "Frame 8153"?: PrimitiveOverrideProps<FlexProps>;
@@ -377,6 +377,7 @@ export declare type Component1OverridesProps = {
     "Rectangle 81426"?: PrimitiveOverrideProps<ViewProps>;
     "Rectangle 91427"?: PrimitiveOverrideProps<ViewProps>;
     "Hueman Logo 2"?: PrimitiveOverrideProps<ImageProps>;
+    "Frame 418"?: PrimitiveOverrideProps<ViewProps>;
     "Hueman Logo 1"?: PrimitiveOverrideProps<ImageProps>;
 } & EscapeHatchProps;
 export declare type Component1Props = React.PropsWithChildren<Partial<ViewProps> & {

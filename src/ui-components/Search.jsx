@@ -9,7 +9,7 @@ import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Flex, Icon, Text, View } from "@aws-amplify/ui-react";
 export default function Search(props) {
-  const { SearchUsers, overrides, ...rest } = props;
+  const { overrides, ...rest } = props;
   return (
     <Flex
       gap="16px"
@@ -99,7 +99,6 @@ export default function Search(props) {
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
         children="Search for the business you want!"
-        onClick={SearchUsers}
         {...getOverrideProps(overrides, "Search for the business you want!")}
       ></Text>
       <Flex

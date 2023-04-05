@@ -32,10 +32,10 @@ export default function Component1(props) {
         justifyContent="unset"
         overflow="hidden"
         position="absolute"
-        top="0%"
-        bottom="0%"
-        left="0%"
-        right="0%"
+        top="-0.57%"
+        bottom="0.57%"
+        left="-2.71%"
+        right="2.71%"
         padding="0px 0px 0px 0px"
         backgroundColor="rgba(255,255,255,1)"
         {...getOverrideProps(overrides, "Landing/Home Page")}
@@ -43,7 +43,7 @@ export default function Component1(props) {
         <Icon
           width="438px"
           height="494px"
-          viewBox={{ minX: 0, minY: 0, width: 494.0000305175781, height: 438 }}
+          viewBox={{ minX: 0, minY: 0, width: 494, height: 438 }}
           paths={[
             {
               d: "M232.001 22.7914C266.669 33.8271 293.19 59.0856 321.462 81.9632C345.821 101.674 367.535 122.68 386.373 147.708C407.356 175.586 436.558 201.878 437.946 236.727C439.339 271.689 413.407 301.049 393.634 329.933C375.044 357.089 349.427 376.425 326.286 399.834C294.612 431.874 276.642 487.167 232.001 493.434C188.845 499.493 155.35 455.511 121.061 428.647C90.6713 404.838 63.7547 378.262 43.2622 345.562C22.2195 311.985 -4.9806 275.918 0.784638 236.727C6.54044 197.599 56.4992 180.962 72.7787 144.912C91.7576 102.884 65.5798 40.245 102.192 12.1644C137.222 -14.7032 189.919 9.39588 232.001 22.7914Z",
@@ -87,7 +87,7 @@ export default function Component1(props) {
         <Icon
           width="438px"
           height="494px"
-          viewBox={{ minX: 0, minY: 0, width: 494.0000305175781, height: 438 }}
+          viewBox={{ minX: 0, minY: 0, width: 494, height: 438.0000305175781 }}
           paths={[
             {
               d: "M232.001 22.7914C266.669 33.8271 293.19 59.0856 321.462 81.9632C345.821 101.674 367.535 122.68 386.373 147.708C407.356 175.586 436.558 201.878 437.946 236.727C439.339 271.689 413.407 301.049 393.634 329.933C375.044 357.089 349.427 376.425 326.286 399.834C294.612 431.874 276.642 487.167 232.001 493.434C188.845 499.493 155.35 455.511 121.061 428.647C90.6713 404.838 63.7547 378.262 43.2622 345.562C22.2195 311.985 -4.9806 275.918 0.784638 236.727C6.54044 197.599 56.4992 180.962 72.7787 144.912C91.7576 102.884 65.5798 40.245 102.192 12.1644C137.222 -14.7032 189.919 9.39588 232.001 22.7914Z",
@@ -131,7 +131,7 @@ export default function Component1(props) {
         <Icon
           width="438px"
           height="494px"
-          viewBox={{ minX: 0, minY: 0, width: 494.0000305175781, height: 438 }}
+          viewBox={{ minX: 0, minY: 0, width: 494, height: 438 }}
           paths={[
             {
               d: "M232.001 22.7914C266.669 33.8271 293.19 59.0856 321.462 81.9632C345.821 101.674 367.535 122.68 386.373 147.708C407.356 175.586 436.558 201.878 437.946 236.727C439.339 271.689 413.407 301.049 393.634 329.933C375.044 357.089 349.427 376.425 326.286 399.834C294.612 431.874 276.642 487.167 232.001 493.434C188.845 499.493 155.35 455.511 121.061 428.647C90.6713 404.838 63.7547 378.262 43.2622 345.562C22.2195 311.985 -4.9806 275.918 0.784638 236.727C6.54044 197.599 56.4992 180.962 72.7787 144.912C91.7576 102.884 65.5798 40.245 102.192 12.1644C137.222 -14.7032 189.919 9.39588 232.001 22.7914Z",
@@ -153,7 +153,7 @@ export default function Component1(props) {
         <Icon
           width="438px"
           height="494px"
-          viewBox={{ minX: 0, minY: 0, width: 494, height: 438 }}
+          viewBox={{ minX: 0, minY: 0, width: 494.0000305175781, height: 438 }}
           paths={[
             {
               d: "M232.001 22.7914C266.669 33.8271 293.19 59.0856 321.462 81.9632C345.821 101.674 367.535 122.68 386.373 147.708C407.356 175.586 436.558 201.878 437.946 236.727C439.339 271.689 413.407 301.049 393.634 329.933C375.044 357.089 349.427 376.425 326.286 399.834C294.612 431.874 276.642 487.167 232.001 493.434C188.845 499.493 155.35 455.511 121.061 428.647C90.6713 404.838 63.7547 378.262 43.2622 345.562C22.2195 311.985 -4.9806 275.918 0.784638 236.727C6.54044 197.599 56.4992 180.962 72.7787 144.912C91.7576 102.884 65.5798 40.245 102.192 12.1644C137.222 -14.7032 189.919 9.39588 232.001 22.7914Z",
@@ -188,12 +188,7 @@ export default function Component1(props) {
           <Icon
             width="438px"
             height="494px"
-            viewBox={{
-              minX: 0,
-              minY: 0,
-              width: 494.0000305175781,
-              height: 438,
-            }}
+            viewBox={{ minX: 0, minY: 0, width: 494, height: 438 }}
             paths={[
               {
                 d: "M232.001 22.7914C266.669 33.8271 293.19 59.0856 321.462 81.9632C345.821 101.674 367.535 122.68 386.373 147.708C407.356 175.586 436.558 201.878 437.946 236.727C439.339 271.689 413.407 301.049 393.634 329.933C375.044 357.089 349.427 376.425 326.286 399.834C294.612 431.874 276.642 487.167 232.001 493.434C188.845 499.493 155.35 455.511 121.061 428.647C90.6713 404.838 63.7547 378.262 43.2622 345.562C22.2195 311.985 -4.9806 275.918 0.784638 236.727C6.54044 197.599 56.4992 180.962 72.7787 144.912C91.7576 102.884 65.5798 40.245 102.192 12.1644C137.222 -14.7032 189.919 9.39588 232.001 22.7914Z",
@@ -237,7 +232,7 @@ export default function Component1(props) {
         </View>
         <View
           padding="0px 0px 0px 0px"
-          width="1507px"
+          width="1567px"
           height="720px"
           display="block"
           gap="unset"
@@ -250,7 +245,7 @@ export default function Component1(props) {
         >
           <View
             padding="0px 0px 0px 0px"
-            width="907px"
+            width="967px"
             height="720px"
             display="block"
             gap="unset"
@@ -512,8 +507,8 @@ export default function Component1(props) {
                     position="relative"
                     padding="0px 0px 0px 0px"
                     whiteSpace="pre-wrap"
-                    children="56 Houses"
-                    {...getOverrideProps(overrides, "56 Houses")}
+                    children="1000+ Businesses"
+                    {...getOverrideProps(overrides, "1000+ Businesses")}
                   ></Text>
                   <Text
                     fontFamily="Lexend"
@@ -533,8 +528,8 @@ export default function Component1(props) {
                     position="relative"
                     padding="0px 0px 0px 0px"
                     whiteSpace="pre-wrap"
-                    children="Sold Monthly"
-                    {...getOverrideProps(overrides, "Sold Monthly")}
+                    children="Promoted Weekly"
+                    {...getOverrideProps(overrides, "Promoted Weekly")}
                   ></Text>
                 </Flex>
               </Flex>
@@ -1078,8 +1073,8 @@ export default function Component1(props) {
                   viewBox={{
                     minX: 0,
                     minY: 0,
-                    width: 18.000099182128906,
-                    height: 18.4892578125,
+                    width: 18.000091552734375,
+                    height: 18.48931884765625,
                   }}
                   paths={[
                     {
@@ -1156,7 +1151,7 @@ export default function Component1(props) {
                     minX: 0,
                     minY: 0,
                     width: 18,
-                    height: 17.5469970703125,
+                    height: 17.54705810546875,
                   }}
                   paths={[
                     {
@@ -1650,7 +1645,7 @@ export default function Component1(props) {
                         minX: 0,
                         minY: 0,
                         width: 12.00006103515625,
-                        height: 12.326171875,
+                        height: 12.326202392578125,
                       }}
                       paths={[
                         {
@@ -1925,8 +1920,8 @@ export default function Component1(props) {
                       viewBox={{
                         minX: 0,
                         minY: 0,
-                        width: 12.800003051757812,
-                        height: 12.58941650390625,
+                        width: 12.799995422363281,
+                        height: 12.589447021484375,
                       }}
                       paths={[
                         {
@@ -2453,8 +2448,8 @@ export default function Component1(props) {
                   viewBox={{
                     minX: 0,
                     minY: 0,
-                    width: 8.16668701171875,
-                    height: 16.3333740234375,
+                    width: 8.166656494140625,
+                    height: 16.33331298828125,
                   }}
                   paths={[
                     {
@@ -2514,7 +2509,7 @@ export default function Component1(props) {
                     minX: 0,
                     minY: 0,
                     width: 8.166656494140625,
-                    height: 16.3333740234375,
+                    height: 16.33331298828125,
                   }}
                   paths={[
                     {
@@ -3051,7 +3046,7 @@ export default function Component1(props) {
                             minX: 0,
                             minY: 0,
                             width: 2.007659912109375,
-                            height: 3.0111083984375,
+                            height: 3.0111236572265625,
                           }}
                           paths={[
                             {
@@ -3078,7 +3073,7 @@ export default function Component1(props) {
                             minX: 0,
                             minY: 0,
                             width: 2.007659912109375,
-                            height: 3.010986328125,
+                            height: 3.0109710693359375,
                           }}
                           paths={[
                             {
@@ -4405,7 +4400,7 @@ export default function Component1(props) {
                         viewBox={{
                           minX: 0,
                           minY: 0,
-                          width: 23.33319091796875,
+                          width: 23.33319854736328,
                           height: 23.33642578125,
                         }}
                         paths={[
@@ -4690,7 +4685,7 @@ export default function Component1(props) {
                         viewBox={{
                           minX: 0,
                           minY: 0,
-                          width: 23.333251953125,
+                          width: 23.33319091796875,
                           height: 23.33642578125,
                         }}
                         paths={[
@@ -6772,6 +6767,20 @@ export default function Component1(props) {
           objectFit="cover"
           {...getOverrideProps(overrides, "Hueman Logo 2")}
         ></Image>
+        <View
+          width="400px"
+          height="600px"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
+          overflow="hidden"
+          position="absolute"
+          top="930px"
+          left="120px"
+          padding="0px 0px 0px 0px"
+          {...getOverrideProps(overrides, "Frame 418")}
+        ></View>
       </View>
       <Image
         width="17.64%"

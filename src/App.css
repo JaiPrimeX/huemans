@@ -1,9 +1,15 @@
 .App {
   text-align: center;
+  color: black;
 }
 
+.amplify-button:hover {
+  background-color: #976d0b;
+}
+
+
 .App-logo {
-  height: 40vmin;
+  height: 10px;
   pointer-events: none;
 }
 
@@ -21,7 +27,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
 .App-link {
