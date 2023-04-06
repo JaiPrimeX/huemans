@@ -1,7 +1,9 @@
 import * as React from "react";
+import { useEffect } from "react";
 import {
   useNavigate,
   Link,
+  createSearchParams,
   Routes,
   Route,
 } from 'react-router-dom';
@@ -60,6 +62,23 @@ const Home = ({ signOut }) => {
     console.log(usersFromAPI)
   }
 
+  const navigate = useNavigate();
+
+  async function handleSubmit (searchResults) {
+    //event.preventDefault();
+    await fetchBusinesses();
+    // 👇️ redirect to /contacts
+  };
+
+  useEffect(() => {
+    if (businesses.length > 0){
+      const Data = {
+        searchedTerm: searchTerm,
+        businessResults: businesses
+      }
+      navigate('/search', {state:Data});}
+  },[businesses]);
+
   async function fetchBusinesses() {
 
     const variables = {
@@ -79,7 +98,6 @@ const Home = ({ signOut }) => {
       })
     );
     setBusinesses(businessesFromAPI);
-    console.log(businessesFromAPI)
   } 
 
   return (
@@ -109,7 +127,7 @@ const Home = ({ signOut }) => {
       placeholder="Search here..."
       value = {searchTerm} 
       onChange = {handleSearchTermChange}
-      onSubmit = {fetchBusinesses}
+      onSubmit = {handleSubmit}
       onClear = {handleClear}
     />}
     ></Navs>
