@@ -29,8 +29,8 @@ export default function ListingCollection(props) {
       var loaded = await Promise.all(
         itemsDataStore.map(async (item) => ({
           ...item,
-          Owner: await item.Owner,
           Reviews: await item.Reviews.toArray(),
+          Owner: await item.Owner,
         }))
       );
       setItems(loaded);
@@ -40,6 +40,8 @@ export default function ListingCollection(props) {
   return (
     <Collection
       type="list"
+      isSearchable={true}
+      searchPlaceholder="Search..."
       direction="column"
       justifyContent="left"
       items={items || []}

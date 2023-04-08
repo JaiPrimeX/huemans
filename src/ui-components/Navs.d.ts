@@ -5,6 +5,7 @@
  **************************************************************************/
 
 import * as React from "react";
+import { Users } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { FlexProps, IconProps, ImageProps, TextProps, ViewProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
@@ -40,6 +41,7 @@ export declare type NavsProps = React.PropsWithChildren<Partial<ViewProps> & {
     profileButton?: React.ReactNode;
     favoritesButton?: React.ReactNode;
     businessesButton?: React.ReactNode;
+    signout?: Users;
 } & {
     overrides?: NavsOverridesProps | undefined | null;
 }>;

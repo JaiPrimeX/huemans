@@ -2,7 +2,12 @@ import { ModelInit, MutableModel, __modelMeta__, ManagedIdentifier } from "@aws-
 // @ts-ignore
 import { LazyLoading, LazyLoadingDisabled, AsyncItem, AsyncCollection } from "@aws-amplify/datastore";
 
-
+export enum Categories {
+  BRUNCH = "BRUNCH",
+  SANDWICHES = "SANDWICHES",
+  CAFE = "CAFE",
+  SWEETS = "SWEETS"
+}
 
 type EagerAddresses = {
   readonly Street?: string | null;
@@ -69,10 +74,13 @@ type EagerBusinesses = {
   readonly Name?: string | null;
   readonly Address?: Addresses | null;
   readonly Category?: string | null;
-  readonly BusinessImage?: string | null;
-  readonly Hours?: string | null;
-  readonly Owner?: Users | null;
   readonly Reviews?: (Ratings | null)[] | null;
+  readonly Phone?: string | null;
+  readonly Hours?: string | null;
+  readonly BusinessImage?: string | null;
+  readonly Owner?: Users | null;
+  readonly Website?: string | null;
+  readonly userss?: (UsersBusinesses | null)[] | null;
   readonly usersID: string;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
@@ -87,10 +95,13 @@ type LazyBusinesses = {
   readonly Name?: string | null;
   readonly Address?: Addresses | null;
   readonly Category?: string | null;
-  readonly BusinessImage?: string | null;
-  readonly Hours?: string | null;
-  readonly Owner: AsyncItem<Users | undefined>;
   readonly Reviews: AsyncCollection<Ratings>;
+  readonly Phone?: string | null;
+  readonly Hours?: string | null;
+  readonly BusinessImage?: string | null;
+  readonly Owner: AsyncItem<Users | undefined>;
+  readonly Website?: string | null;
+  readonly userss: AsyncCollection<UsersBusinesses>;
   readonly usersID: string;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
@@ -118,6 +129,7 @@ type EagerUsers = {
   readonly OwnedBusinesses?: (Businesses | null)[] | null;
   readonly ratingss?: (RatingsUsers | null)[] | null;
   readonly UserRatings?: (Ratings | null)[] | null;
+  readonly Favorites?: (UsersBusinesses | null)[] | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -138,6 +150,7 @@ type LazyUsers = {
   readonly OwnedBusinesses: AsyncCollection<Businesses>;
   readonly ratingss: AsyncCollection<RatingsUsers>;
   readonly UserRatings: AsyncCollection<Ratings>;
+  readonly Favorites: AsyncCollection<UsersBusinesses>;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -272,4 +285,38 @@ export declare type RatingsUsers = LazyLoading extends LazyLoadingDisabled ? Eag
 
 export declare const RatingsUsers: (new (init: ModelInit<RatingsUsers>) => RatingsUsers) & {
   copyOf(source: RatingsUsers, mutator: (draft: MutableModel<RatingsUsers>) => MutableModel<RatingsUsers> | void): RatingsUsers;
+}
+
+type EagerUsersBusinesses = {
+  readonly [__modelMeta__]: {
+    identifier: ManagedIdentifier<UsersBusinesses, 'id'>;
+    readOnlyFields: 'createdAt' | 'updatedAt';
+  };
+  readonly id: string;
+  readonly businessesId?: string | null;
+  readonly usersId?: string | null;
+  readonly businesses: Businesses;
+  readonly users: Users;
+  readonly createdAt?: string | null;
+  readonly updatedAt?: string | null;
+}
+
+type LazyUsersBusinesses = {
+  readonly [__modelMeta__]: {
+    identifier: ManagedIdentifier<UsersBusinesses, 'id'>;
+    readOnlyFields: 'createdAt' | 'updatedAt';
+  };
+  readonly id: string;
+  readonly businessesId?: string | null;
+  readonly usersId?: string | null;
+  readonly businesses: AsyncItem<Businesses>;
+  readonly users: AsyncItem<Users>;
+  readonly createdAt?: string | null;
+  readonly updatedAt?: string | null;
+}
+
+export declare type UsersBusinesses = LazyLoading extends LazyLoadingDisabled ? EagerUsersBusinesses : LazyUsersBusinesses
+
+export declare const UsersBusinesses: (new (init: ModelInit<UsersBusinesses>) => UsersBusinesses) & {
+  copyOf(source: UsersBusinesses, mutator: (draft: MutableModel<UsersBusinesses>) => MutableModel<UsersBusinesses> | void): UsersBusinesses;
 }

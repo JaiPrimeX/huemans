@@ -162,8 +162,24 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
-                "BusinessImage": {
-                    "name": "BusinessImage",
+                "Reviews": {
+                    "name": "Reviews",
+                    "isArray": true,
+                    "type": {
+                        "model": "Ratings"
+                    },
+                    "isRequired": false,
+                    "attributes": [],
+                    "isArrayNullable": true,
+                    "association": {
+                        "connectionType": "HAS_MANY",
+                        "associatedWith": [
+                            "BusinessReviews"
+                        ]
+                    }
+                },
+                "Phone": {
+                    "name": "Phone",
                     "isArray": false,
                     "type": "String",
                     "isRequired": false,
@@ -171,6 +187,13 @@ export const schema = {
                 },
                 "Hours": {
                     "name": "Hours",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "BusinessImage": {
+                    "name": "BusinessImage",
                     "isArray": false,
                     "type": "String",
                     "isRequired": false,
@@ -191,11 +214,18 @@ export const schema = {
                         ]
                     }
                 },
-                "Reviews": {
-                    "name": "Reviews",
+                "Website": {
+                    "name": "Website",
+                    "isArray": false,
+                    "type": "AWSURL",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "userss": {
+                    "name": "userss",
                     "isArray": true,
                     "type": {
-                        "model": "Ratings"
+                        "model": "UsersBusinesses"
                     },
                     "isRequired": false,
                     "attributes": [],
@@ -203,7 +233,7 @@ export const schema = {
                     "association": {
                         "connectionType": "HAS_MANY",
                         "associatedWith": [
-                            "BusinessReviews"
+                            "businesses"
                         ]
                     }
                 },
@@ -369,6 +399,22 @@ export const schema = {
                         "connectionType": "HAS_MANY",
                         "associatedWith": [
                             "usersID"
+                        ]
+                    }
+                },
+                "Favorites": {
+                    "name": "Favorites",
+                    "isArray": true,
+                    "type": {
+                        "model": "UsersBusinesses"
+                    },
+                    "isRequired": false,
+                    "attributes": [],
+                    "isArrayNullable": true,
+                    "association": {
+                        "connectionType": "HAS_MANY",
+                        "associatedWith": [
+                            "users"
                         ]
                     }
                 },
@@ -716,9 +762,117 @@ export const schema = {
                     }
                 }
             ]
+        },
+        "UsersBusinesses": {
+            "name": "UsersBusinesses",
+            "fields": {
+                "id": {
+                    "name": "id",
+                    "isArray": false,
+                    "type": "ID",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "businessesId": {
+                    "name": "businessesId",
+                    "isArray": false,
+                    "type": "ID",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "usersId": {
+                    "name": "usersId",
+                    "isArray": false,
+                    "type": "ID",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "businesses": {
+                    "name": "businesses",
+                    "isArray": false,
+                    "type": {
+                        "model": "Businesses"
+                    },
+                    "isRequired": true,
+                    "attributes": [],
+                    "association": {
+                        "connectionType": "BELONGS_TO",
+                        "targetNames": [
+                            "businessesId"
+                        ]
+                    }
+                },
+                "users": {
+                    "name": "users",
+                    "isArray": false,
+                    "type": {
+                        "model": "Users"
+                    },
+                    "isRequired": true,
+                    "attributes": [],
+                    "association": {
+                        "connectionType": "BELONGS_TO",
+                        "targetNames": [
+                            "usersId"
+                        ]
+                    }
+                },
+                "createdAt": {
+                    "name": "createdAt",
+                    "isArray": false,
+                    "type": "AWSDateTime",
+                    "isRequired": false,
+                    "attributes": [],
+                    "isReadOnly": true
+                },
+                "updatedAt": {
+                    "name": "updatedAt",
+                    "isArray": false,
+                    "type": "AWSDateTime",
+                    "isRequired": false,
+                    "attributes": [],
+                    "isReadOnly": true
+                }
+            },
+            "syncable": true,
+            "pluralName": "UsersBusinesses",
+            "attributes": [
+                {
+                    "type": "model",
+                    "properties": {}
+                },
+                {
+                    "type": "key",
+                    "properties": {
+                        "name": "byBusinesses",
+                        "fields": [
+                            "businessesId"
+                        ]
+                    }
+                },
+                {
+                    "type": "key",
+                    "properties": {
+                        "name": "byUsers",
+                        "fields": [
+                            "usersId"
+                        ]
+                    }
+                }
+            ]
         }
     },
-    "enums": {},
+    "enums": {
+        "Categories": {
+            "name": "Categories",
+            "values": [
+                "BRUNCH",
+                "SANDWICHES",
+                "CAFE",
+                "SWEETS"
+            ]
+        }
+    },
     "nonModels": {
         "Addresses": {
             "name": "Addresses",
@@ -755,5 +909,5 @@ export const schema = {
         }
     },
     "codegenVersion": "3.4.0",
-    "version": "fdf7492b77ee2a5f3bd11233fcd98fbc"
+    "version": "08f5d6e33692eeb8c6cc670d65055d44"
 };

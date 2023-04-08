@@ -22,6 +22,7 @@ export default function Navs(props) {
     profileButton,
     favoritesButton,
     businessesButton,
+    signout,
     overrides,
     ...rest
   } = props;

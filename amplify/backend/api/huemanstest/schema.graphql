@@ -1,3 +1,10 @@
+enum Categories {
+  BRUNCH
+  SANDWICHES
+  CAFE
+  SWEETS
+}
+
 type Addresses {
   Street: String
   City: String
@@ -20,10 +27,13 @@ type Businesses @model @auth(rules: [{allow: public}]) {
   Name: String
   Address: Addresses
   Category: String
-  BusinessImage: String
-  Hours: String
-  Owner: Users @belongsTo(fields: ["usersID"])
   Reviews: [Ratings] @hasMany(indexName: "byBusinesses", fields: ["id"])
+  Phone: String
+  Hours: String
+  BusinessImage: String
+  Owner: Users @belongsTo(fields: ["usersID"])
+  Website: AWSURL
+  userss: [Users] @manyToMany(relationName: "UsersBusinesses")
   usersID: ID! @index(name: "byUsers")
 }
 
@@ -39,6 +49,7 @@ type Users @model @auth(rules: [{allow: public}]) {
   OwnedBusinesses: [Businesses] @hasMany(indexName: "byUsers", fields: ["id"])
   ratingss: [Ratings] @manyToMany(relationName: "RatingsUsers")
   UserRatings: [Ratings] @hasMany(indexName: "byUsers", fields: ["id"])
+  Favorites: [Businesses] @manyToMany(relationName: "UsersBusinesses")
 }
 
 type Todo @model @auth(rules: [{allow: public}]) {
