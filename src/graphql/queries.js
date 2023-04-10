@@ -18,8 +18,13 @@ export const getRatings = /* GraphQL */ `
           PostalCode
         }
         Category
-        BusinessImage
+        Reviews {
+          nextToken
+          startedAt
+        }
+        Phone
         Hours
+        BusinessImage
         Owner {
           id
           UserName
@@ -29,15 +34,26 @@ export const getRatings = /* GraphQL */ `
           Phone
           Birthday
           ProfileImage
+          Owner
           createdAt
           updatedAt
+          _version
+          _deleted
+          _lastChangedAt
         }
-        Reviews {
+        userss {
           nextToken
+          startedAt
         }
         usersID
+        Web
+        Lat
+        Lng
         createdAt
         updatedAt
+        _version
+        _deleted
+        _lastChangedAt
       }
       UserReviews {
         items {
@@ -46,12 +62,19 @@ export const getRatings = /* GraphQL */ `
           usersId
           createdAt
           updatedAt
+          _version
+          _deleted
+          _lastChangedAt
         }
         nextToken
+        startedAt
       }
       usersID
       createdAt
       updatedAt
+      _version
+      _deleted
+      _lastChangedAt
     }
   }
 `;
@@ -71,20 +94,83 @@ export const listRatings = /* GraphQL */ `
           id
           Name
           Category
-          BusinessImage
+          Phone
           Hours
+          BusinessImage
           usersID
+          Web
+          Lat
+          Lng
           createdAt
           updatedAt
+          _version
+          _deleted
+          _lastChangedAt
         }
         UserReviews {
           nextToken
+          startedAt
         }
         usersID
         createdAt
         updatedAt
+        _version
+        _deleted
+        _lastChangedAt
       }
       nextToken
+      startedAt
+    }
+  }
+`;
+export const syncRatings = /* GraphQL */ `
+  query SyncRatings(
+    $filter: ModelRatingsFilterInput
+    $limit: Int
+    $nextToken: String
+    $lastSync: AWSTimestamp
+  ) {
+    syncRatings(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      lastSync: $lastSync
+    ) {
+      items {
+        id
+        Rating
+        Review
+        businessesID
+        BusinessReviews {
+          id
+          Name
+          Category
+          Phone
+          Hours
+          BusinessImage
+          usersID
+          Web
+          Lat
+          Lng
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        UserReviews {
+          nextToken
+          startedAt
+        }
+        usersID
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
     }
   }
 `;
@@ -100,8 +186,25 @@ export const getBusinesses = /* GraphQL */ `
         PostalCode
       }
       Category
-      BusinessImage
+      Reviews {
+        items {
+          id
+          Rating
+          Review
+          businessesID
+          usersID
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      Phone
       Hours
+      BusinessImage
       Owner {
         id
         UserName
@@ -113,31 +216,50 @@ export const getBusinesses = /* GraphQL */ `
         ProfileImage
         OwnedBusinesses {
           nextToken
+          startedAt
         }
         ratingss {
           nextToken
+          startedAt
         }
         UserRatings {
           nextToken
+          startedAt
         }
+        Favorites {
+          nextToken
+          startedAt
+        }
+        Owner
         createdAt
         updatedAt
+        _version
+        _deleted
+        _lastChangedAt
       }
-      Reviews {
+      userss {
         items {
           id
-          Rating
-          Review
-          businessesID
-          usersID
+          businessesId
+          usersId
           createdAt
           updatedAt
+          _version
+          _deleted
+          _lastChangedAt
         }
         nextToken
+        startedAt
       }
       usersID
+      Web
+      Lat
+      Lng
       createdAt
       updatedAt
+      _version
+      _deleted
+      _lastChangedAt
     }
   }
 `;
@@ -158,8 +280,13 @@ export const listBusinesses = /* GraphQL */ `
           PostalCode
         }
         Category
-        BusinessImage
+        Reviews {
+          nextToken
+          startedAt
+        }
+        Phone
         Hours
+        BusinessImage
         Owner {
           id
           UserName
@@ -169,17 +296,94 @@ export const listBusinesses = /* GraphQL */ `
           Phone
           Birthday
           ProfileImage
+          Owner
           createdAt
           updatedAt
+          _version
+          _deleted
+          _lastChangedAt
         }
-        Reviews {
+        userss {
           nextToken
+          startedAt
         }
         usersID
+        Web
+        Lat
+        Lng
         createdAt
         updatedAt
+        _version
+        _deleted
+        _lastChangedAt
       }
       nextToken
+      startedAt
+    }
+  }
+`;
+export const syncBusinesses = /* GraphQL */ `
+  query SyncBusinesses(
+    $filter: ModelBusinessesFilterInput
+    $limit: Int
+    $nextToken: String
+    $lastSync: AWSTimestamp
+  ) {
+    syncBusinesses(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      lastSync: $lastSync
+    ) {
+      items {
+        id
+        Name
+        Address {
+          Street
+          City
+          State
+          PostalCode
+        }
+        Category
+        Reviews {
+          nextToken
+          startedAt
+        }
+        Phone
+        Hours
+        BusinessImage
+        Owner {
+          id
+          UserName
+          FirstName
+          LastName
+          Email
+          Phone
+          Birthday
+          ProfileImage
+          Owner
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        userss {
+          nextToken
+          startedAt
+        }
+        usersID
+        Web
+        Lat
+        Lng
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
     }
   }
 `;
@@ -199,13 +403,21 @@ export const getUsers = /* GraphQL */ `
           id
           Name
           Category
-          BusinessImage
+          Phone
           Hours
+          BusinessImage
           usersID
+          Web
+          Lat
+          Lng
           createdAt
           updatedAt
+          _version
+          _deleted
+          _lastChangedAt
         }
         nextToken
+        startedAt
       }
       ratingss {
         items {
@@ -214,8 +426,12 @@ export const getUsers = /* GraphQL */ `
           usersId
           createdAt
           updatedAt
+          _version
+          _deleted
+          _lastChangedAt
         }
         nextToken
+        startedAt
       }
       UserRatings {
         items {
@@ -226,11 +442,33 @@ export const getUsers = /* GraphQL */ `
           usersID
           createdAt
           updatedAt
+          _version
+          _deleted
+          _lastChangedAt
         }
         nextToken
+        startedAt
       }
+      Favorites {
+        items {
+          id
+          businessesId
+          usersId
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      Owner
       createdAt
       updatedAt
+      _version
+      _deleted
+      _lastChangedAt
     }
   }
 `;
@@ -252,17 +490,79 @@ export const listUsers = /* GraphQL */ `
         ProfileImage
         OwnedBusinesses {
           nextToken
+          startedAt
         }
         ratingss {
           nextToken
+          startedAt
         }
         UserRatings {
           nextToken
+          startedAt
         }
+        Favorites {
+          nextToken
+          startedAt
+        }
+        Owner
         createdAt
         updatedAt
+        _version
+        _deleted
+        _lastChangedAt
       }
       nextToken
+      startedAt
+    }
+  }
+`;
+export const syncUsers = /* GraphQL */ `
+  query SyncUsers(
+    $filter: ModelUsersFilterInput
+    $limit: Int
+    $nextToken: String
+    $lastSync: AWSTimestamp
+  ) {
+    syncUsers(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      lastSync: $lastSync
+    ) {
+      items {
+        id
+        UserName
+        FirstName
+        LastName
+        Email
+        Phone
+        Birthday
+        ProfileImage
+        OwnedBusinesses {
+          nextToken
+          startedAt
+        }
+        ratingss {
+          nextToken
+          startedAt
+        }
+        UserRatings {
+          nextToken
+          startedAt
+        }
+        Favorites {
+          nextToken
+          startedAt
+        }
+        Owner
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
     }
   }
 `;
@@ -274,6 +574,9 @@ export const getTodo = /* GraphQL */ `
       description
       createdAt
       updatedAt
+      _version
+      _deleted
+      _lastChangedAt
     }
   }
 `;
@@ -290,8 +593,40 @@ export const listTodos = /* GraphQL */ `
         description
         createdAt
         updatedAt
+        _version
+        _deleted
+        _lastChangedAt
       }
       nextToken
+      startedAt
+    }
+  }
+`;
+export const syncTodos = /* GraphQL */ `
+  query SyncTodos(
+    $filter: ModelTodoFilterInput
+    $limit: Int
+    $nextToken: String
+    $lastSync: AWSTimestamp
+  ) {
+    syncTodos(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      lastSync: $lastSync
+    ) {
+      items {
+        id
+        name
+        description
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
     }
   }
 `;
@@ -304,6 +639,9 @@ export const getNote = /* GraphQL */ `
       image
       createdAt
       updatedAt
+      _version
+      _deleted
+      _lastChangedAt
     }
   }
 `;
@@ -321,8 +659,41 @@ export const listNotes = /* GraphQL */ `
         image
         createdAt
         updatedAt
+        _version
+        _deleted
+        _lastChangedAt
       }
       nextToken
+      startedAt
+    }
+  }
+`;
+export const syncNotes = /* GraphQL */ `
+  query SyncNotes(
+    $filter: ModelNoteFilterInput
+    $limit: Int
+    $nextToken: String
+    $lastSync: AWSTimestamp
+  ) {
+    syncNotes(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      lastSync: $lastSync
+    ) {
+      items {
+        id
+        name
+        description
+        image
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
     }
   }
 `;
@@ -334,6 +705,9 @@ export const getLogos = /* GraphQL */ `
       SmallLogo
       createdAt
       updatedAt
+      _version
+      _deleted
+      _lastChangedAt
     }
   }
 `;
@@ -350,8 +724,40 @@ export const listLogos = /* GraphQL */ `
         SmallLogo
         createdAt
         updatedAt
+        _version
+        _deleted
+        _lastChangedAt
       }
       nextToken
+      startedAt
+    }
+  }
+`;
+export const syncLogos = /* GraphQL */ `
+  query SyncLogos(
+    $filter: ModelLogosFilterInput
+    $limit: Int
+    $nextToken: String
+    $lastSync: AWSTimestamp
+  ) {
+    syncLogos(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      lastSync: $lastSync
+    ) {
+      items {
+        id
+        BigLogo
+        SmallLogo
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
     }
   }
 `;
@@ -370,18 +776,29 @@ export const getRatingsUsers = /* GraphQL */ `
           id
           Name
           Category
-          BusinessImage
+          Phone
           Hours
+          BusinessImage
           usersID
+          Web
+          Lat
+          Lng
           createdAt
           updatedAt
+          _version
+          _deleted
+          _lastChangedAt
         }
         UserReviews {
           nextToken
+          startedAt
         }
         usersID
         createdAt
         updatedAt
+        _version
+        _deleted
+        _lastChangedAt
       }
       users {
         id
@@ -394,18 +811,32 @@ export const getRatingsUsers = /* GraphQL */ `
         ProfileImage
         OwnedBusinesses {
           nextToken
+          startedAt
         }
         ratingss {
           nextToken
+          startedAt
         }
         UserRatings {
           nextToken
+          startedAt
         }
+        Favorites {
+          nextToken
+          startedAt
+        }
+        Owner
         createdAt
         updatedAt
+        _version
+        _deleted
+        _lastChangedAt
       }
       createdAt
       updatedAt
+      _version
+      _deleted
+      _lastChangedAt
     }
   }
 `;
@@ -428,6 +859,9 @@ export const listRatingsUsers = /* GraphQL */ `
           usersID
           createdAt
           updatedAt
+          _version
+          _deleted
+          _lastChangedAt
         }
         users {
           id
@@ -438,13 +872,286 @@ export const listRatingsUsers = /* GraphQL */ `
           Phone
           Birthday
           ProfileImage
+          Owner
           createdAt
           updatedAt
+          _version
+          _deleted
+          _lastChangedAt
         }
         createdAt
         updatedAt
+        _version
+        _deleted
+        _lastChangedAt
       }
       nextToken
+      startedAt
+    }
+  }
+`;
+export const syncRatingsUsers = /* GraphQL */ `
+  query SyncRatingsUsers(
+    $filter: ModelRatingsUsersFilterInput
+    $limit: Int
+    $nextToken: String
+    $lastSync: AWSTimestamp
+  ) {
+    syncRatingsUsers(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      lastSync: $lastSync
+    ) {
+      items {
+        id
+        ratingsId
+        usersId
+        ratings {
+          id
+          Rating
+          Review
+          businessesID
+          usersID
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        users {
+          id
+          UserName
+          FirstName
+          LastName
+          Email
+          Phone
+          Birthday
+          ProfileImage
+          Owner
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const getUsersBusinesses = /* GraphQL */ `
+  query GetUsersBusinesses($id: ID!) {
+    getUsersBusinesses(id: $id) {
+      id
+      businessesId
+      usersId
+      businesses {
+        id
+        Name
+        Address {
+          Street
+          City
+          State
+          PostalCode
+        }
+        Category
+        Reviews {
+          nextToken
+          startedAt
+        }
+        Phone
+        Hours
+        BusinessImage
+        Owner {
+          id
+          UserName
+          FirstName
+          LastName
+          Email
+          Phone
+          Birthday
+          ProfileImage
+          Owner
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        userss {
+          nextToken
+          startedAt
+        }
+        usersID
+        Web
+        Lat
+        Lng
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      users {
+        id
+        UserName
+        FirstName
+        LastName
+        Email
+        Phone
+        Birthday
+        ProfileImage
+        OwnedBusinesses {
+          nextToken
+          startedAt
+        }
+        ratingss {
+          nextToken
+          startedAt
+        }
+        UserRatings {
+          nextToken
+          startedAt
+        }
+        Favorites {
+          nextToken
+          startedAt
+        }
+        Owner
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const listUsersBusinesses = /* GraphQL */ `
+  query ListUsersBusinesses(
+    $filter: ModelUsersBusinessesFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listUsersBusinesses(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        businessesId
+        usersId
+        businesses {
+          id
+          Name
+          Category
+          Phone
+          Hours
+          BusinessImage
+          usersID
+          Web
+          Lat
+          Lng
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        users {
+          id
+          UserName
+          FirstName
+          LastName
+          Email
+          Phone
+          Birthday
+          ProfileImage
+          Owner
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const syncUsersBusinesses = /* GraphQL */ `
+  query SyncUsersBusinesses(
+    $filter: ModelUsersBusinessesFilterInput
+    $limit: Int
+    $nextToken: String
+    $lastSync: AWSTimestamp
+  ) {
+    syncUsersBusinesses(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      lastSync: $lastSync
+    ) {
+      items {
+        id
+        businessesId
+        usersId
+        businesses {
+          id
+          Name
+          Category
+          Phone
+          Hours
+          BusinessImage
+          usersID
+          Web
+          Lat
+          Lng
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        users {
+          id
+          UserName
+          FirstName
+          LastName
+          Email
+          Phone
+          Birthday
+          ProfileImage
+          Owner
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
     }
   }
 `;
@@ -472,20 +1179,32 @@ export const ratingsByBusinessesID = /* GraphQL */ `
           id
           Name
           Category
-          BusinessImage
+          Phone
           Hours
+          BusinessImage
           usersID
+          Web
+          Lat
+          Lng
           createdAt
           updatedAt
+          _version
+          _deleted
+          _lastChangedAt
         }
         UserReviews {
           nextToken
+          startedAt
         }
         usersID
         createdAt
         updatedAt
+        _version
+        _deleted
+        _lastChangedAt
       }
       nextToken
+      startedAt
     }
   }
 `;
@@ -513,20 +1232,32 @@ export const ratingsByUsersID = /* GraphQL */ `
           id
           Name
           Category
-          BusinessImage
+          Phone
           Hours
+          BusinessImage
           usersID
+          Web
+          Lat
+          Lng
           createdAt
           updatedAt
+          _version
+          _deleted
+          _lastChangedAt
         }
         UserReviews {
           nextToken
+          startedAt
         }
         usersID
         createdAt
         updatedAt
+        _version
+        _deleted
+        _lastChangedAt
       }
       nextToken
+      startedAt
     }
   }
 `;
@@ -555,8 +1286,13 @@ export const businessesByUsersID = /* GraphQL */ `
           PostalCode
         }
         Category
-        BusinessImage
+        Reviews {
+          nextToken
+          startedAt
+        }
+        Phone
         Hours
+        BusinessImage
         Owner {
           id
           UserName
@@ -566,17 +1302,29 @@ export const businessesByUsersID = /* GraphQL */ `
           Phone
           Birthday
           ProfileImage
+          Owner
           createdAt
           updatedAt
+          _version
+          _deleted
+          _lastChangedAt
         }
-        Reviews {
+        userss {
           nextToken
+          startedAt
         }
         usersID
+        Web
+        Lat
+        Lng
         createdAt
         updatedAt
+        _version
+        _deleted
+        _lastChangedAt
       }
       nextToken
+      startedAt
     }
   }
 `;
@@ -607,6 +1355,9 @@ export const ratingsUsersByRatingsId = /* GraphQL */ `
           usersID
           createdAt
           updatedAt
+          _version
+          _deleted
+          _lastChangedAt
         }
         users {
           id
@@ -617,13 +1368,21 @@ export const ratingsUsersByRatingsId = /* GraphQL */ `
           Phone
           Birthday
           ProfileImage
+          Owner
           createdAt
           updatedAt
+          _version
+          _deleted
+          _lastChangedAt
         }
         createdAt
         updatedAt
+        _version
+        _deleted
+        _lastChangedAt
       }
       nextToken
+      startedAt
     }
   }
 `;
@@ -654,6 +1413,9 @@ export const ratingsUsersByUsersId = /* GraphQL */ `
           usersID
           createdAt
           updatedAt
+          _version
+          _deleted
+          _lastChangedAt
         }
         users {
           id
@@ -664,13 +1426,147 @@ export const ratingsUsersByUsersId = /* GraphQL */ `
           Phone
           Birthday
           ProfileImage
+          Owner
           createdAt
           updatedAt
+          _version
+          _deleted
+          _lastChangedAt
         }
         createdAt
         updatedAt
+        _version
+        _deleted
+        _lastChangedAt
       }
       nextToken
+      startedAt
+    }
+  }
+`;
+export const usersBusinessesByBusinessesId = /* GraphQL */ `
+  query UsersBusinessesByBusinessesId(
+    $businessesId: ID!
+    $sortDirection: ModelSortDirection
+    $filter: ModelUsersBusinessesFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    usersBusinessesByBusinessesId(
+      businessesId: $businessesId
+      sortDirection: $sortDirection
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
+      items {
+        id
+        businessesId
+        usersId
+        businesses {
+          id
+          Name
+          Category
+          Phone
+          Hours
+          BusinessImage
+          usersID
+          Web
+          Lat
+          Lng
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        users {
+          id
+          UserName
+          FirstName
+          LastName
+          Email
+          Phone
+          Birthday
+          ProfileImage
+          Owner
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const usersBusinessesByUsersId = /* GraphQL */ `
+  query UsersBusinessesByUsersId(
+    $usersId: ID!
+    $sortDirection: ModelSortDirection
+    $filter: ModelUsersBusinessesFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    usersBusinessesByUsersId(
+      usersId: $usersId
+      sortDirection: $sortDirection
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
+      items {
+        id
+        businessesId
+        usersId
+        businesses {
+          id
+          Name
+          Category
+          Phone
+          Hours
+          BusinessImage
+          usersID
+          Web
+          Lat
+          Lng
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        users {
+          id
+          UserName
+          FirstName
+          LastName
+          Email
+          Phone
+          Birthday
+          ProfileImage
+          Owner
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
     }
   }
 `;

@@ -79,9 +79,11 @@ type EagerBusinesses = {
   readonly Hours?: string | null;
   readonly BusinessImage?: string | null;
   readonly Owner?: Users | null;
-  readonly Website?: string | null;
   readonly userss?: (UsersBusinesses | null)[] | null;
   readonly usersID: string;
+  readonly Web?: string | null;
+  readonly Lat?: number | null;
+  readonly Lng?: number | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -100,9 +102,11 @@ type LazyBusinesses = {
   readonly Hours?: string | null;
   readonly BusinessImage?: string | null;
   readonly Owner: AsyncItem<Users | undefined>;
-  readonly Website?: string | null;
   readonly userss: AsyncCollection<UsersBusinesses>;
   readonly usersID: string;
+  readonly Web?: string | null;
+  readonly Lat?: number | null;
+  readonly Lng?: number | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -130,6 +134,7 @@ type EagerUsers = {
   readonly ratingss?: (RatingsUsers | null)[] | null;
   readonly UserRatings?: (Ratings | null)[] | null;
   readonly Favorites?: (UsersBusinesses | null)[] | null;
+  readonly Owner?: boolean | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -151,6 +156,7 @@ type LazyUsers = {
   readonly ratingss: AsyncCollection<RatingsUsers>;
   readonly UserRatings: AsyncCollection<Ratings>;
   readonly Favorites: AsyncCollection<UsersBusinesses>;
+  readonly Owner?: boolean | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }

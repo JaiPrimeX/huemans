@@ -214,13 +214,6 @@ export const schema = {
                         ]
                     }
                 },
-                "Website": {
-                    "name": "Website",
-                    "isArray": false,
-                    "type": "AWSURL",
-                    "isRequired": false,
-                    "attributes": []
-                },
                 "userss": {
                     "name": "userss",
                     "isArray": true,
@@ -242,6 +235,27 @@ export const schema = {
                     "isArray": false,
                     "type": "ID",
                     "isRequired": true,
+                    "attributes": []
+                },
+                "Web": {
+                    "name": "Web",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "Lat": {
+                    "name": "Lat",
+                    "isArray": false,
+                    "type": "Float",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "Lng": {
+                    "name": "Lng",
+                    "isArray": false,
+                    "type": "Float",
+                    "isRequired": false,
                     "attributes": []
                 },
                 "createdAt": {
@@ -417,6 +431,13 @@ export const schema = {
                             "users"
                         ]
                     }
+                },
+                "Owner": {
+                    "name": "Owner",
+                    "isArray": false,
+                    "type": "Boolean",
+                    "isRequired": false,
+                    "attributes": []
                 },
                 "createdAt": {
                     "name": "createdAt",
@@ -909,5 +930,5 @@ export const schema = {
         }
     },
     "codegenVersion": "3.4.0",
-    "version": "08f5d6e33692eeb8c6cc670d65055d44"
+    "version": "f32427eb6bffedc785f270eb572b36db"
 };
