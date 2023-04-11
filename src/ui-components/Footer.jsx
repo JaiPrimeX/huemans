@@ -12,7 +12,7 @@ export default function Footer(props) {
   const { overrides, ...rest } = props;
   return (
     <View
-      width="1444px"
+      width="1611px"
       height="389px"
       display="block"
       gap="unset"
@@ -21,7 +21,7 @@ export default function Footer(props) {
       overflow="hidden"
       position="relative"
       padding="0px 0px 0px 0px"
-      backgroundColor="rgba(255,255,255,1)"
+      backgroundColor="rgba(247,203,151,1)"
       {...getOverrideProps(overrides, "Footer")}
       {...rest}
     >

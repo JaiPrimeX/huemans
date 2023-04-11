@@ -5,7 +5,7 @@
  **************************************************************************/
 
 import * as React from "react";
-import { Businesses } from "../models";
+import { Businesses, Ratings } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { FlexProps, IconProps, ImageProps, TextProps, ViewProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
@@ -16,7 +16,7 @@ export declare type ListingOverridesProps = {
     "Rectangle 15"?: PrimitiveOverrideProps<ImageProps>;
     Name?: PrimitiveOverrideProps<TextProps>;
     Vector70158?: PrimitiveOverrideProps<IconProps>;
-    Hours?: PrimitiveOverrideProps<TextProps>;
+    "Open until"?: PrimitiveOverrideProps<TextProps>;
     "Frame 15"?: PrimitiveOverrideProps<FlexProps>;
     Category?: PrimitiveOverrideProps<TextProps>;
     Review?: PrimitiveOverrideProps<TextProps>;
@@ -24,9 +24,12 @@ export declare type ListingOverridesProps = {
     "bx:bxs-star"?: PrimitiveOverrideProps<ViewProps>;
     Vector70182?: PrimitiveOverrideProps<IconProps>;
     "4.6"?: PrimitiveOverrideProps<TextProps>;
+    hours?: PrimitiveOverrideProps<TextProps>;
+    "Phone Number"?: PrimitiveOverrideProps<TextProps>;
 } & EscapeHatchProps;
 export declare type ListingProps = React.PropsWithChildren<Partial<ViewProps> & {
     businesses?: Businesses;
+    ratings?: Ratings;
 } & {
     overrides?: ListingOverridesProps | undefined | null;
 }>;

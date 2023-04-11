@@ -9,7 +9,7 @@ import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Flex, Icon, Image, Text, View } from "@aws-amplify/ui-react";
 export default function Listing(props) {
-  const { businesses, overrides, ...rest } = props;
+  const { businesses, ratings, overrides, ...rest } = props;
   return (
     <View
       width="748px"
@@ -137,7 +137,7 @@ export default function Listing(props) {
         display="block"
         direction="column"
         justifyContent="unset"
-        width="404px"
+        width="85px"
         height="24px"
         gap="unset"
         alignItems="unset"
@@ -145,11 +145,11 @@ export default function Listing(props) {
         top="34.34%"
         bottom="55.49%"
         left="34.76%"
-        right="11.23%"
+        right="53.88%"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
-        children={businesses?.Hours}
-        {...getOverrideProps(overrides, "Hours")}
+        children="Open until "
+        {...getOverrideProps(overrides, "Open until")}
       ></Text>
       <Flex
         gap="10px"
@@ -165,14 +165,14 @@ export default function Listing(props) {
         right="52.54%"
         borderRadius="32px"
         padding="8px 16px 8px 16px"
-        backgroundColor="rgba(254,226,226,1)"
+        backgroundColor="rgba(254,175,122,1)"
         {...getOverrideProps(overrides, "Frame 15")}
       >
         <Text
           fontFamily="Lexend"
           fontSize="14px"
           fontWeight="500"
-          color="rgba(239,68,68,1)"
+          color="rgba(74,48,30,1)"
           textTransform="capitalize"
           lineHeight="17.5px"
           textAlign="left"
@@ -206,13 +206,13 @@ export default function Listing(props) {
         gap="unset"
         alignItems="unset"
         position="absolute"
-        top="44.51%"
-        bottom="27.11%"
+        top="56.37%"
+        bottom="15.25%"
         left="34.49%"
         right="8.02%"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
-        children="Review"
+        children={businesses?.Web}
         {...getOverrideProps(overrides, "Review")}
       ></Text>
       <Flex
@@ -293,6 +293,54 @@ export default function Listing(props) {
           {...getOverrideProps(overrides, "4.6")}
         ></Text>
       </Flex>
+      <Text
+        fontFamily="Lexend"
+        fontSize="16px"
+        fontWeight="500"
+        color="rgba(0,0,0,1)"
+        lineHeight="20px"
+        textAlign="left"
+        display="block"
+        direction="column"
+        justifyContent="unset"
+        width="69px"
+        height="26px"
+        gap="unset"
+        alignItems="unset"
+        position="absolute"
+        top="33.92%"
+        bottom="55.07%"
+        left="44.12%"
+        right="46.66%"
+        padding="0px 0px 0px 0px"
+        whiteSpace="pre-wrap"
+        children={businesses?.Hours}
+        {...getOverrideProps(overrides, "hours")}
+      ></Text>
+      <Text
+        fontFamily="Lexend"
+        fontSize="16px"
+        fontWeight="500"
+        color="rgba(144,128,128,1)"
+        lineHeight="20px"
+        textAlign="left"
+        display="block"
+        direction="column"
+        justifyContent="unset"
+        width="182px"
+        height="28px"
+        gap="unset"
+        alignItems="unset"
+        position="absolute"
+        top="44.09%"
+        bottom="44.05%"
+        left="34.49%"
+        right="41.18%"
+        padding="0px 0px 0px 0px"
+        whiteSpace="pre-wrap"
+        children={businesses?.Phone}
+        {...getOverrideProps(overrides, "Phone Number")}
+      ></Text>
     </View>
   );
 }

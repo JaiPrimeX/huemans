@@ -4,11 +4,17 @@
  * Any changes to this file will be overwritten when running amplify pull. *
  **************************************************************************/
 
+export { default as About } from "./About";
+export { default as ProfileSideBar } from "./ProfileSideBar";
 export { default as Navs2 } from "./Navs2";
 export { default as Listing } from "./Listing";
+export { default as Editprofilesettings } from "./Editprofilesettings";
 export { default as Favorites } from "./Favorites";
 export { default as Search } from "./Search";
+export { default as Sankofa } from "./Sankofa";
 export { default as MenuItem } from "./MenuItem";
+export { default as EditProfileKyn } from "./EditProfileKyn";
+export { default as Negril } from "./Negril";
 export { default as SuggestedBusinesses } from "./SuggestedBusinesses";
 export { default as Header } from "./Header";
 export { default as Navs } from "./Navs";
@@ -18,7 +24,7 @@ export { default as ItemCard } from "./ItemCard";
 export { default as ListingCollection } from "./ListingCollection";
 export { default as Title } from "./Title";
 export { default as Component1 } from "./Component1";
-export { default as Editprofile } from "./Editprofile";
+export { default as EditprofileMaz } from "./EditprofileMaz";
 export { default as NavMenuOptions } from "./NavMenuOptions";
 export { default as User } from "./User";
 export { default as Footer } from "./Footer";

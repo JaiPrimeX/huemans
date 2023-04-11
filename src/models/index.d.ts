@@ -79,11 +79,13 @@ type EagerBusinesses = {
   readonly Hours?: string | null;
   readonly BusinessImage?: string | null;
   readonly Owner?: Users | null;
+  readonly Web?: string | null;
   readonly userss?: (UsersBusinesses | null)[] | null;
   readonly usersID: string;
-  readonly Web?: string | null;
   readonly Lat?: number | null;
   readonly Lng?: number | null;
+  readonly TopReview?: string | null;
+  readonly Header?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -102,11 +104,13 @@ type LazyBusinesses = {
   readonly Hours?: string | null;
   readonly BusinessImage?: string | null;
   readonly Owner: AsyncItem<Users | undefined>;
+  readonly Web?: string | null;
   readonly userss: AsyncCollection<UsersBusinesses>;
   readonly usersID: string;
-  readonly Web?: string | null;
   readonly Lat?: number | null;
   readonly Lng?: number | null;
+  readonly TopReview?: string | null;
+  readonly Header?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }

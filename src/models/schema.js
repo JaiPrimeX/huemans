@@ -214,6 +214,13 @@ export const schema = {
                         ]
                     }
                 },
+                "Web": {
+                    "name": "Web",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
                 "userss": {
                     "name": "userss",
                     "isArray": true,
@@ -237,13 +244,6 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
-                "Web": {
-                    "name": "Web",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                },
                 "Lat": {
                     "name": "Lat",
                     "isArray": false,
@@ -255,6 +255,20 @@ export const schema = {
                     "name": "Lng",
                     "isArray": false,
                     "type": "Float",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "TopReview": {
+                    "name": "TopReview",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "Header": {
+                    "name": "Header",
+                    "isArray": false,
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -930,5 +944,5 @@ export const schema = {
         }
     },
     "codegenVersion": "3.4.0",
-    "version": "f32427eb6bffedc785f270eb572b36db"
+    "version": "0f85e1397fd1920acb177482eb20eaad"
 };

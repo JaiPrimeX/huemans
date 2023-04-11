@@ -32,9 +32,13 @@ type Businesses @model @auth(rules: [{allow: public}]) {
   Hours: String
   BusinessImage: String
   Owner: Users @belongsTo(fields: ["usersID"])
-  Website: AWSURL
+  Web: String
   userss: [Users] @manyToMany(relationName: "UsersBusinesses")
   usersID: ID! @index(name: "byUsers")
+  Lat: Float
+  Lng: Float
+  TopReview: String
+  Header: String
 }
 
 type Users @model @auth(rules: [{allow: public}]) {
@@ -50,6 +54,7 @@ type Users @model @auth(rules: [{allow: public}]) {
   ratingss: [Ratings] @manyToMany(relationName: "RatingsUsers")
   UserRatings: [Ratings] @hasMany(indexName: "byUsers", fields: ["id"])
   Favorites: [Businesses] @manyToMany(relationName: "UsersBusinesses")
+  Owner: Boolean
 }
 
 type Todo @model @auth(rules: [{allow: public}]) {

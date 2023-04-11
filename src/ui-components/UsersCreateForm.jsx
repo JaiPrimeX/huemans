@@ -6,7 +6,13 @@
 
 /* eslint-disable */
 import * as React from "react";
-import { Button, Flex, Grid, TextField } from "@aws-amplify/ui-react";
+import {
+  Button,
+  Flex,
+  Grid,
+  SwitchField,
+  TextField,
+} from "@aws-amplify/ui-react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Users } from "../models";
 import { fetchByPath, validateField } from "./utils";
@@ -30,6 +36,7 @@ export default function UsersCreateForm(props) {
     Phone: "",
     Birthday: "",
     ProfileImage: "",
+    Owner: false,
   };
   const [UserName, setUserName] = React.useState(initialValues.UserName);
   const [FirstName, setFirstName] = React.useState(initialValues.FirstName);
@@ -40,6 +47,7 @@ export default function UsersCreateForm(props) {
   const [ProfileImage, setProfileImage] = React.useState(
     initialValues.ProfileImage
   );
+  const [Owner, setOwner] = React.useState(initialValues.Owner);
   const [errors, setErrors] = React.useState({});
   const resetStateValues = () => {
     setUserName(initialValues.UserName);
@@ -49,6 +57,7 @@ export default function UsersCreateForm(props) {
     setPhone(initialValues.Phone);
     setBirthday(initialValues.Birthday);
     setProfileImage(initialValues.ProfileImage);
+    setOwner(initialValues.Owner);
     setErrors({});
   };
   const validations = {
@@ -59,6 +68,7 @@ export default function UsersCreateForm(props) {
     Phone: [{ type: "Phone" }],
     Birthday: [],
     ProfileImage: [],
+    Owner: [],
   };
   const runValidationTasks = async (
     fieldName,
@@ -93,6 +103,7 @@ export default function UsersCreateForm(props) {
           Phone,
           Birthday,
           ProfileImage,
+          Owner,
         };
         const validationResponses = await Promise.all(
           Object.keys(validations).reduce((promises, fieldName) => {
@@ -154,6 +165,7 @@ export default function UsersCreateForm(props) {
               Phone,
               Birthday,
               ProfileImage,
+              Owner,
             };
             const result = onChange(modelFields);
             value = result?.UserName ?? value;
@@ -184,6 +196,7 @@ export default function UsersCreateForm(props) {
               Phone,
               Birthday,
               ProfileImage,
+              Owner,
             };
             const result = onChange(modelFields);
             value = result?.FirstName ?? value;
@@ -214,6 +227,7 @@ export default function UsersCreateForm(props) {
               Phone,
               Birthday,
               ProfileImage,
+              Owner,
             };
             const result = onChange(modelFields);
             value = result?.LastName ?? value;
@@ -244,6 +258,7 @@ export default function UsersCreateForm(props) {
               Phone,
               Birthday,
               ProfileImage,
+              Owner,
             };
             const result = onChange(modelFields);
             value = result?.Email ?? value;
@@ -275,6 +290,7 @@ export default function UsersCreateForm(props) {
               Phone: value,
               Birthday,
               ProfileImage,
+              Owner,
             };
             const result = onChange(modelFields);
             value = result?.Phone ?? value;
@@ -306,6 +322,7 @@ export default function UsersCreateForm(props) {
               Phone,
               Birthday: value,
               ProfileImage,
+              Owner,
             };
             const result = onChange(modelFields);
             value = result?.Birthday ?? value;
@@ -336,6 +353,7 @@ export default function UsersCreateForm(props) {
               Phone,
               Birthday,
               ProfileImage: value,
+              Owner,
             };
             const result = onChange(modelFields);
             value = result?.ProfileImage ?? value;
@@ -350,6 +368,37 @@ export default function UsersCreateForm(props) {
         hasError={errors.ProfileImage?.hasError}
         {...getOverrideProps(overrides, "ProfileImage")}
       ></TextField>
+      <SwitchField
+        label="Owner"
+        defaultChecked={false}
+        isDisabled={false}
+        isChecked={Owner}
+        onChange={(e) => {
+          let value = e.target.checked;
+          if (onChange) {
+            const modelFields = {
+              UserName,
+              FirstName,
+              LastName,
+              Email,
+              Phone,
+              Birthday,
+              ProfileImage,
+              Owner: value,
+            };
+            const result = onChange(modelFields);
+            value = result?.Owner ?? value;
+          }
+          if (errors.Owner?.hasError) {
+            runValidationTasks("Owner", value);
+          }
+          setOwner(value);
+        }}
+        onBlur={() => runValidationTasks("Owner", Owner)}
+        errorMessage={errors.Owner?.errorMessage}
+        hasError={errors.Owner?.hasError}
+        {...getOverrideProps(overrides, "Owner")}
+      ></SwitchField>
       <Flex
         justifyContent="space-between"
         {...getOverrideProps(overrides, "CTAFlex")}
