@@ -36,7 +36,7 @@ const SearchBar = () => {
 
   async function handleSubmit (searchResults) {
     //event.preventDefault();
-    await fetchBusinesses();
+     await fetchBusinesses();
     // redirect to /contacts
   };
 
@@ -46,6 +46,8 @@ const SearchBar = () => {
         searchedTerm: searchTerm,
         businessResults: businesses
       }
+      console.log(businesses);
+      setBusinesses([]);
       navigate('/search', {state:Data});}
   },[businesses]);
 

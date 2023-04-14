@@ -24,14 +24,6 @@ export declare type Component1OverridesProps = {
     Img135?: PrimitiveOverrideProps<ViewProps>;
     "image 6"?: PrimitiveOverrideProps<ImageProps>;
     "Frame 13137"?: PrimitiveOverrideProps<FlexProps>;
-    "1K Peoples138"?: PrimitiveOverrideProps<FlexProps>;
-    "Group 7"?: PrimitiveOverrideProps<FlexProps>;
-    "Ellipse 4"?: PrimitiveOverrideProps<IconProps>;
-    "Ellipse 5"?: PrimitiveOverrideProps<IconProps>;
-    "Ellipse 6142"?: PrimitiveOverrideProps<IconProps>;
-    "Frame 8143"?: PrimitiveOverrideProps<FlexProps>;
-    "1K+ Business Owners"?: PrimitiveOverrideProps<TextProps>;
-    "Successfully Getting Home"?: PrimitiveOverrideProps<TextProps>;
     "1K Peoples146"?: PrimitiveOverrideProps<FlexProps>;
     "Rectangle 12147"?: PrimitiveOverrideProps<ImageProps>;
     "Frame 8148"?: PrimitiveOverrideProps<FlexProps>;
@@ -81,7 +73,6 @@ export declare type Component1OverridesProps = {
     House1130?: PrimitiveOverrideProps<FlexProps>;
     "Frame 10"?: PrimitiveOverrideProps<FlexProps>;
     Img1132?: PrimitiveOverrideProps<FlexProps>;
-    "Rectangle 151133"?: PrimitiveOverrideProps<ImageProps>;
     "Frame 131134"?: PrimitiveOverrideProps<FlexProps>;
     "ant-design:fire-filled1135"?: PrimitiveOverrideProps<ViewProps>;
     Vector1136?: PrimitiveOverrideProps<IconProps>;
@@ -309,7 +300,6 @@ export declare type Component1OverridesProps = {
     Vector1358?: PrimitiveOverrideProps<IconProps>;
     "2 min read | 24 Apr 2021"?: PrimitiveOverrideProps<TextProps>;
     "Col 2"?: PrimitiveOverrideProps<ViewProps>;
-    "Rectangle 23"?: PrimitiveOverrideProps<ViewProps>;
     "Frame 171362"?: PrimitiveOverrideProps<FlexProps>;
     "Frame 171363"?: PrimitiveOverrideProps<FlexProps>;
     "Frame 191364"?: PrimitiveOverrideProps<FlexProps>;
@@ -377,7 +367,6 @@ export declare type Component1OverridesProps = {
     "Rectangle 81426"?: PrimitiveOverrideProps<ViewProps>;
     "Rectangle 91427"?: PrimitiveOverrideProps<ViewProps>;
     "Hueman Logo 2"?: PrimitiveOverrideProps<ImageProps>;
-    "Frame 418"?: PrimitiveOverrideProps<ViewProps>;
     "Hueman Logo 1"?: PrimitiveOverrideProps<ImageProps>;
 } & EscapeHatchProps;
 export declare type Component1Props = React.PropsWithChildren<Partial<ViewProps> & {

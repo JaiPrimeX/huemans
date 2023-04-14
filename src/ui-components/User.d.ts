@@ -5,6 +5,7 @@
  **************************************************************************/
 
 import * as React from "react";
+import { Ratings, Users } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { FlexProps, IconProps, TextProps, ViewProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
@@ -25,6 +26,9 @@ export declare type UserOverridesProps = {
     "4.6"?: PrimitiveOverrideProps<TextProps>;
 } & EscapeHatchProps;
 export declare type UserProps = React.PropsWithChildren<Partial<FlexProps> & {
+    ratings?: Ratings;
+    users?: Users;
+} & {
     overrides?: UserOverridesProps | undefined | null;
 }>;
 export default function User(props: UserProps): React.ReactElement;

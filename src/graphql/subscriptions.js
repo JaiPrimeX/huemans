@@ -20,7 +20,6 @@ export const onCreateRatings = /* GraphQL */ `
         Category
         Reviews {
           nextToken
-          startedAt
         }
         Phone
         Hours
@@ -37,23 +36,19 @@ export const onCreateRatings = /* GraphQL */ `
           Owner
           createdAt
           updatedAt
-          _version
-          _deleted
-          _lastChangedAt
         }
+        Web
         userss {
           nextToken
-          startedAt
         }
         usersID
-        Web
         Lat
         Lng
+        TopReview
+        Header
+        Rate
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
       }
       UserReviews {
         items {
@@ -62,19 +57,12 @@ export const onCreateRatings = /* GraphQL */ `
           usersId
           createdAt
           updatedAt
-          _version
-          _deleted
-          _lastChangedAt
         }
         nextToken
-        startedAt
       }
       usersID
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
     }
   }
 `;
@@ -97,7 +85,6 @@ export const onUpdateRatings = /* GraphQL */ `
         Category
         Reviews {
           nextToken
-          startedAt
         }
         Phone
         Hours
@@ -114,23 +101,19 @@ export const onUpdateRatings = /* GraphQL */ `
           Owner
           createdAt
           updatedAt
-          _version
-          _deleted
-          _lastChangedAt
         }
+        Web
         userss {
           nextToken
-          startedAt
         }
         usersID
-        Web
         Lat
         Lng
+        TopReview
+        Header
+        Rate
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
       }
       UserReviews {
         items {
@@ -139,19 +122,12 @@ export const onUpdateRatings = /* GraphQL */ `
           usersId
           createdAt
           updatedAt
-          _version
-          _deleted
-          _lastChangedAt
         }
         nextToken
-        startedAt
       }
       usersID
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
     }
   }
 `;
@@ -174,7 +150,6 @@ export const onDeleteRatings = /* GraphQL */ `
         Category
         Reviews {
           nextToken
-          startedAt
         }
         Phone
         Hours
@@ -191,23 +166,19 @@ export const onDeleteRatings = /* GraphQL */ `
           Owner
           createdAt
           updatedAt
-          _version
-          _deleted
-          _lastChangedAt
         }
+        Web
         userss {
           nextToken
-          startedAt
         }
         usersID
-        Web
         Lat
         Lng
+        TopReview
+        Header
+        Rate
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
       }
       UserReviews {
         items {
@@ -216,19 +187,12 @@ export const onDeleteRatings = /* GraphQL */ `
           usersId
           createdAt
           updatedAt
-          _version
-          _deleted
-          _lastChangedAt
         }
         nextToken
-        startedAt
       }
       usersID
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
     }
   }
 `;
@@ -255,12 +219,8 @@ export const onCreateBusinesses = /* GraphQL */ `
           usersID
           createdAt
           updatedAt
-          _version
-          _deleted
-          _lastChangedAt
         }
         nextToken
-        startedAt
       }
       Phone
       Hours
@@ -276,27 +236,21 @@ export const onCreateBusinesses = /* GraphQL */ `
         ProfileImage
         OwnedBusinesses {
           nextToken
-          startedAt
         }
         ratingss {
           nextToken
-          startedAt
         }
         UserRatings {
           nextToken
-          startedAt
         }
         Favorites {
           nextToken
-          startedAt
         }
         Owner
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
       }
+      Web
       userss {
         items {
           id
@@ -304,22 +258,17 @@ export const onCreateBusinesses = /* GraphQL */ `
           usersId
           createdAt
           updatedAt
-          _version
-          _deleted
-          _lastChangedAt
         }
         nextToken
-        startedAt
       }
       usersID
-      Web
       Lat
       Lng
+      TopReview
+      Header
+      Rate
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
     }
   }
 `;
@@ -346,12 +295,8 @@ export const onUpdateBusinesses = /* GraphQL */ `
           usersID
           createdAt
           updatedAt
-          _version
-          _deleted
-          _lastChangedAt
         }
         nextToken
-        startedAt
       }
       Phone
       Hours
@@ -367,27 +312,21 @@ export const onUpdateBusinesses = /* GraphQL */ `
         ProfileImage
         OwnedBusinesses {
           nextToken
-          startedAt
         }
         ratingss {
           nextToken
-          startedAt
         }
         UserRatings {
           nextToken
-          startedAt
         }
         Favorites {
           nextToken
-          startedAt
         }
         Owner
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
       }
+      Web
       userss {
         items {
           id
@@ -395,22 +334,17 @@ export const onUpdateBusinesses = /* GraphQL */ `
           usersId
           createdAt
           updatedAt
-          _version
-          _deleted
-          _lastChangedAt
         }
         nextToken
-        startedAt
       }
       usersID
-      Web
       Lat
       Lng
+      TopReview
+      Header
+      Rate
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
     }
   }
 `;
@@ -437,12 +371,8 @@ export const onDeleteBusinesses = /* GraphQL */ `
           usersID
           createdAt
           updatedAt
-          _version
-          _deleted
-          _lastChangedAt
         }
         nextToken
-        startedAt
       }
       Phone
       Hours
@@ -458,27 +388,21 @@ export const onDeleteBusinesses = /* GraphQL */ `
         ProfileImage
         OwnedBusinesses {
           nextToken
-          startedAt
         }
         ratingss {
           nextToken
-          startedAt
         }
         UserRatings {
           nextToken
-          startedAt
         }
         Favorites {
           nextToken
-          startedAt
         }
         Owner
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
       }
+      Web
       userss {
         items {
           id
@@ -486,22 +410,17 @@ export const onDeleteBusinesses = /* GraphQL */ `
           usersId
           createdAt
           updatedAt
-          _version
-          _deleted
-          _lastChangedAt
         }
         nextToken
-        startedAt
       }
       usersID
-      Web
       Lat
       Lng
+      TopReview
+      Header
+      Rate
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
     }
   }
 `;
@@ -524,18 +443,17 @@ export const onCreateUsers = /* GraphQL */ `
           Phone
           Hours
           BusinessImage
-          usersID
           Web
+          usersID
           Lat
           Lng
+          TopReview
+          Header
+          Rate
           createdAt
           updatedAt
-          _version
-          _deleted
-          _lastChangedAt
         }
         nextToken
-        startedAt
       }
       ratingss {
         items {
@@ -544,12 +462,8 @@ export const onCreateUsers = /* GraphQL */ `
           usersId
           createdAt
           updatedAt
-          _version
-          _deleted
-          _lastChangedAt
         }
         nextToken
-        startedAt
       }
       UserRatings {
         items {
@@ -560,12 +474,8 @@ export const onCreateUsers = /* GraphQL */ `
           usersID
           createdAt
           updatedAt
-          _version
-          _deleted
-          _lastChangedAt
         }
         nextToken
-        startedAt
       }
       Favorites {
         items {
@@ -574,19 +484,12 @@ export const onCreateUsers = /* GraphQL */ `
           usersId
           createdAt
           updatedAt
-          _version
-          _deleted
-          _lastChangedAt
         }
         nextToken
-        startedAt
       }
       Owner
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
     }
   }
 `;
@@ -609,18 +512,17 @@ export const onUpdateUsers = /* GraphQL */ `
           Phone
           Hours
           BusinessImage
-          usersID
           Web
+          usersID
           Lat
           Lng
+          TopReview
+          Header
+          Rate
           createdAt
           updatedAt
-          _version
-          _deleted
-          _lastChangedAt
         }
         nextToken
-        startedAt
       }
       ratingss {
         items {
@@ -629,12 +531,8 @@ export const onUpdateUsers = /* GraphQL */ `
           usersId
           createdAt
           updatedAt
-          _version
-          _deleted
-          _lastChangedAt
         }
         nextToken
-        startedAt
       }
       UserRatings {
         items {
@@ -645,12 +543,8 @@ export const onUpdateUsers = /* GraphQL */ `
           usersID
           createdAt
           updatedAt
-          _version
-          _deleted
-          _lastChangedAt
         }
         nextToken
-        startedAt
       }
       Favorites {
         items {
@@ -659,19 +553,12 @@ export const onUpdateUsers = /* GraphQL */ `
           usersId
           createdAt
           updatedAt
-          _version
-          _deleted
-          _lastChangedAt
         }
         nextToken
-        startedAt
       }
       Owner
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
     }
   }
 `;
@@ -694,18 +581,17 @@ export const onDeleteUsers = /* GraphQL */ `
           Phone
           Hours
           BusinessImage
-          usersID
           Web
+          usersID
           Lat
           Lng
+          TopReview
+          Header
+          Rate
           createdAt
           updatedAt
-          _version
-          _deleted
-          _lastChangedAt
         }
         nextToken
-        startedAt
       }
       ratingss {
         items {
@@ -714,12 +600,8 @@ export const onDeleteUsers = /* GraphQL */ `
           usersId
           createdAt
           updatedAt
-          _version
-          _deleted
-          _lastChangedAt
         }
         nextToken
-        startedAt
       }
       UserRatings {
         items {
@@ -730,12 +612,8 @@ export const onDeleteUsers = /* GraphQL */ `
           usersID
           createdAt
           updatedAt
-          _version
-          _deleted
-          _lastChangedAt
         }
         nextToken
-        startedAt
       }
       Favorites {
         items {
@@ -744,19 +622,12 @@ export const onDeleteUsers = /* GraphQL */ `
           usersId
           createdAt
           updatedAt
-          _version
-          _deleted
-          _lastChangedAt
         }
         nextToken
-        startedAt
       }
       Owner
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
     }
   }
 `;
@@ -768,9 +639,6 @@ export const onCreateTodo = /* GraphQL */ `
       description
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
     }
   }
 `;
@@ -782,9 +650,6 @@ export const onUpdateTodo = /* GraphQL */ `
       description
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
     }
   }
 `;
@@ -796,9 +661,6 @@ export const onDeleteTodo = /* GraphQL */ `
       description
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
     }
   }
 `;
@@ -811,9 +673,6 @@ export const onCreateNote = /* GraphQL */ `
       image
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
     }
   }
 `;
@@ -826,9 +685,6 @@ export const onUpdateNote = /* GraphQL */ `
       image
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
     }
   }
 `;
@@ -841,9 +697,6 @@ export const onDeleteNote = /* GraphQL */ `
       image
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
     }
   }
 `;
@@ -855,9 +708,6 @@ export const onCreateLogos = /* GraphQL */ `
       SmallLogo
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
     }
   }
 `;
@@ -869,9 +719,6 @@ export const onUpdateLogos = /* GraphQL */ `
       SmallLogo
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
     }
   }
 `;
@@ -883,9 +730,6 @@ export const onDeleteLogos = /* GraphQL */ `
       SmallLogo
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
     }
   }
 `;
@@ -909,26 +753,22 @@ export const onCreateRatingsUsers = /* GraphQL */ `
           Phone
           Hours
           BusinessImage
-          usersID
           Web
+          usersID
           Lat
           Lng
+          TopReview
+          Header
+          Rate
           createdAt
           updatedAt
-          _version
-          _deleted
-          _lastChangedAt
         }
         UserReviews {
           nextToken
-          startedAt
         }
         usersID
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
       }
       users {
         id
@@ -941,32 +781,22 @@ export const onCreateRatingsUsers = /* GraphQL */ `
         ProfileImage
         OwnedBusinesses {
           nextToken
-          startedAt
         }
         ratingss {
           nextToken
-          startedAt
         }
         UserRatings {
           nextToken
-          startedAt
         }
         Favorites {
           nextToken
-          startedAt
         }
         Owner
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
     }
   }
 `;
@@ -990,26 +820,22 @@ export const onUpdateRatingsUsers = /* GraphQL */ `
           Phone
           Hours
           BusinessImage
-          usersID
           Web
+          usersID
           Lat
           Lng
+          TopReview
+          Header
+          Rate
           createdAt
           updatedAt
-          _version
-          _deleted
-          _lastChangedAt
         }
         UserReviews {
           nextToken
-          startedAt
         }
         usersID
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
       }
       users {
         id
@@ -1022,32 +848,22 @@ export const onUpdateRatingsUsers = /* GraphQL */ `
         ProfileImage
         OwnedBusinesses {
           nextToken
-          startedAt
         }
         ratingss {
           nextToken
-          startedAt
         }
         UserRatings {
           nextToken
-          startedAt
         }
         Favorites {
           nextToken
-          startedAt
         }
         Owner
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
     }
   }
 `;
@@ -1071,26 +887,22 @@ export const onDeleteRatingsUsers = /* GraphQL */ `
           Phone
           Hours
           BusinessImage
-          usersID
           Web
+          usersID
           Lat
           Lng
+          TopReview
+          Header
+          Rate
           createdAt
           updatedAt
-          _version
-          _deleted
-          _lastChangedAt
         }
         UserReviews {
           nextToken
-          startedAt
         }
         usersID
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
       }
       users {
         id
@@ -1103,32 +915,22 @@ export const onDeleteRatingsUsers = /* GraphQL */ `
         ProfileImage
         OwnedBusinesses {
           nextToken
-          startedAt
         }
         ratingss {
           nextToken
-          startedAt
         }
         UserRatings {
           nextToken
-          startedAt
         }
         Favorites {
           nextToken
-          startedAt
         }
         Owner
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
     }
   }
 `;
@@ -1152,7 +954,6 @@ export const onCreateUsersBusinesses = /* GraphQL */ `
         Category
         Reviews {
           nextToken
-          startedAt
         }
         Phone
         Hours
@@ -1169,23 +970,19 @@ export const onCreateUsersBusinesses = /* GraphQL */ `
           Owner
           createdAt
           updatedAt
-          _version
-          _deleted
-          _lastChangedAt
         }
+        Web
         userss {
           nextToken
-          startedAt
         }
         usersID
-        Web
         Lat
         Lng
+        TopReview
+        Header
+        Rate
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
       }
       users {
         id
@@ -1198,32 +995,22 @@ export const onCreateUsersBusinesses = /* GraphQL */ `
         ProfileImage
         OwnedBusinesses {
           nextToken
-          startedAt
         }
         ratingss {
           nextToken
-          startedAt
         }
         UserRatings {
           nextToken
-          startedAt
         }
         Favorites {
           nextToken
-          startedAt
         }
         Owner
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
     }
   }
 `;
@@ -1247,7 +1034,6 @@ export const onUpdateUsersBusinesses = /* GraphQL */ `
         Category
         Reviews {
           nextToken
-          startedAt
         }
         Phone
         Hours
@@ -1264,23 +1050,19 @@ export const onUpdateUsersBusinesses = /* GraphQL */ `
           Owner
           createdAt
           updatedAt
-          _version
-          _deleted
-          _lastChangedAt
         }
+        Web
         userss {
           nextToken
-          startedAt
         }
         usersID
-        Web
         Lat
         Lng
+        TopReview
+        Header
+        Rate
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
       }
       users {
         id
@@ -1293,32 +1075,22 @@ export const onUpdateUsersBusinesses = /* GraphQL */ `
         ProfileImage
         OwnedBusinesses {
           nextToken
-          startedAt
         }
         ratingss {
           nextToken
-          startedAt
         }
         UserRatings {
           nextToken
-          startedAt
         }
         Favorites {
           nextToken
-          startedAt
         }
         Owner
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
     }
   }
 `;
@@ -1342,7 +1114,6 @@ export const onDeleteUsersBusinesses = /* GraphQL */ `
         Category
         Reviews {
           nextToken
-          startedAt
         }
         Phone
         Hours
@@ -1359,23 +1130,19 @@ export const onDeleteUsersBusinesses = /* GraphQL */ `
           Owner
           createdAt
           updatedAt
-          _version
-          _deleted
-          _lastChangedAt
         }
+        Web
         userss {
           nextToken
-          startedAt
         }
         usersID
-        Web
         Lat
         Lng
+        TopReview
+        Header
+        Rate
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
       }
       users {
         id
@@ -1388,32 +1155,22 @@ export const onDeleteUsersBusinesses = /* GraphQL */ `
         ProfileImage
         OwnedBusinesses {
           nextToken
-          startedAt
         }
         ratingss {
           nextToken
-          startedAt
         }
         UserRatings {
           nextToken
-          startedAt
         }
         Favorites {
           nextToken
-          startedAt
         }
         Owner
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
     }
   }
 `;

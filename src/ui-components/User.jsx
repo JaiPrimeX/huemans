@@ -9,7 +9,7 @@ import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Flex, Icon, Text, View } from "@aws-amplify/ui-react";
 export default function User(props) {
-  const { overrides, ...rest } = props;
+  const { ratings, users, overrides, ...rest } = props;
   return (
     <Flex
       gap="4px"
@@ -57,7 +57,7 @@ export default function User(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="Nadine’s Hair Braiding"
+          children={users?.UserName}
           {...getOverrideProps(overrides, "Nadine\u2019s Hair Braiding")}
         ></Text>
         <Text
@@ -78,7 +78,7 @@ export default function User(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="Nadine's Hair Braiding is truly a GAME CHANGER! I looked at my watch at 5:26 am as the 2 installers were prepping the hair. I was told &quot;Ma'am, you're done&quot; at 6:16 am. The 3.5 hours of time I got back was invaluable.  Check them out, so you can look great AND save time."
+          children={ratings?.Review}
           {...getOverrideProps(
             overrides,
             "Nadine's Hair Braiding is truly a GAME CHANGER! I looked at my watch at 5:26 am as the 2 installers were prepping the hair. I was told \"Ma'am, you're done\" at 6:16 am. The 3.5 hours of time I got back was invaluable. Check them out, so you can look great AND save time."
@@ -127,6 +127,7 @@ export default function User(props) {
             justifyContent="unset"
             shrink="0"
             position="relative"
+            src={users?.ProfileImage}
             {...getOverrideProps(overrides, "Ellipse 6")}
           ></Icon>
           <Flex
@@ -162,7 +163,7 @@ export default function User(props) {
               position="relative"
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
-              children="Dianne Russell"
+              children={users?.FirstName}
               {...getOverrideProps(overrides, "Dianne Russell")}
             ></Text>
             <Text
@@ -184,7 +185,7 @@ export default function User(props) {
               position="relative"
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
-              children="Washington, D.C."
+              children={ratings?.createdAt}
               {...getOverrideProps(overrides, "Washington, D.C.")}
             ></Text>
           </Flex>
@@ -260,7 +261,7 @@ export default function User(props) {
             position="relative"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
-            children="4.6"
+            children={ratings?.Rating}
             {...getOverrideProps(overrides, "4.6")}
           ></Text>
         </Flex>

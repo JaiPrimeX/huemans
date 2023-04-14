@@ -232,7 +232,7 @@ export default function Component1(props) {
         </View>
         <View
           padding="0px 0px 0px 0px"
-          width="1567px"
+          width="1320px"
           height="720px"
           display="block"
           gap="unset"
@@ -245,7 +245,7 @@ export default function Component1(props) {
         >
           <View
             padding="0px 0px 0px 0px"
-            width="967px"
+            width="720px"
             height="720px"
             display="block"
             gap="unset"
@@ -284,170 +284,6 @@ export default function Component1(props) {
               padding="0px 0px 0px 0px"
               {...getOverrideProps(overrides, "Frame 13137")}
             >
-              <Flex
-                gap="16px"
-                direction="row"
-                width="unset"
-                height="unset"
-                justifyContent="flex-start"
-                alignItems="center"
-                shrink="0"
-                position="relative"
-                boxShadow="0px 11px 48px rgba(0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.05999999865889549)"
-                borderRadius="32px"
-                padding="24px 24px 24px 24px"
-                backgroundColor="rgba(255,255,255,1)"
-                {...getOverrideProps(overrides, "1K Peoples138")}
-              >
-                <Flex
-                  padding="0px 0px 0px 0px"
-                  width="112px"
-                  height="56px"
-                  display="block"
-                  gap="unset"
-                  alignItems="unset"
-                  justifyContent="unset"
-                  shrink="0"
-                  position="relative"
-                  {...getOverrideProps(overrides, "Group 7")}
-                >
-                  <Icon
-                    width="56px"
-                    height="56px"
-                    viewBox={{ minX: 0, minY: 0, width: 56, height: 56 }}
-                    paths={[
-                      {
-                        d: "M53 28C53 41.8071 41.8071 53 28 53L28 59C45.1208 59 59 45.1208 59 28L53 28ZM28 53C14.1929 53 3 41.8071 3 28L-3 28C-3 45.1208 10.8792 59 28 59L28 53ZM3 28C3 14.1929 14.1929 3 28 3L28 -3C10.8792 -3 -3 10.8792 -3 28L3 28ZM28 3C41.8071 3 53 14.1929 53 28L59 28C59 10.8792 45.1208 -3 28 -3L28 3Z",
-                        stroke: "rgba(255,255,255,1)",
-                        fillRule: "nonzero",
-                        strokeWidth: 3,
-                      },
-                      {
-                        d: "M56 28C56 43.464 43.464 56 28 56C12.536 56 0 43.464 0 28C0 12.536 12.536 0 28 0C43.464 0 56 12.536 56 28Z",
-                        fillRule: "nonzero",
-                      },
-                    ]}
-                    display="block"
-                    gap="unset"
-                    alignItems="unset"
-                    justifyContent="unset"
-                    position="absolute"
-                    top="0px"
-                    left="0px"
-                    {...getOverrideProps(overrides, "Ellipse 4")}
-                  ></Icon>
-                  <Icon
-                    width="56px"
-                    height="56px"
-                    viewBox={{ minX: 0, minY: 0, width: 56, height: 56 }}
-                    paths={[
-                      {
-                        d: "M53 28C53 41.8071 41.8071 53 28 53L28 59C45.1208 59 59 45.1208 59 28L53 28ZM28 53C14.1929 53 3 41.8071 3 28L-3 28C-3 45.1208 10.8792 59 28 59L28 53ZM3 28C3 14.1929 14.1929 3 28 3L28 -3C10.8792 -3 -3 10.8792 -3 28L3 28ZM28 3C41.8071 3 53 14.1929 53 28L59 28C59 10.8792 45.1208 -3 28 -3L28 3Z",
-                        stroke: "rgba(255,255,255,1)",
-                        fillRule: "nonzero",
-                        strokeWidth: 3,
-                      },
-                      {
-                        d: "M56 28C56 43.464 43.464 56 28 56C12.536 56 0 43.464 0 28C0 12.536 12.536 0 28 0C43.464 0 56 12.536 56 28Z",
-                        fillRule: "nonzero",
-                      },
-                    ]}
-                    display="block"
-                    gap="unset"
-                    alignItems="unset"
-                    justifyContent="unset"
-                    position="absolute"
-                    top="0px"
-                    left="28px"
-                    {...getOverrideProps(overrides, "Ellipse 5")}
-                  ></Icon>
-                  <Icon
-                    width="56px"
-                    height="56px"
-                    viewBox={{ minX: 0, minY: 0, width: 56, height: 56 }}
-                    paths={[
-                      {
-                        d: "M53 28C53 41.8071 41.8071 53 28 53L28 59C45.1208 59 59 45.1208 59 28L53 28ZM28 53C14.1929 53 3 41.8071 3 28L-3 28C-3 45.1208 10.8792 59 28 59L28 53ZM3 28C3 14.1929 14.1929 3 28 3L28 -3C10.8792 -3 -3 10.8792 -3 28L3 28ZM28 3C41.8071 3 53 14.1929 53 28L59 28C59 10.8792 45.1208 -3 28 -3L28 3Z",
-                        stroke: "rgba(255,255,255,1)",
-                        fillRule: "nonzero",
-                        strokeWidth: 3,
-                      },
-                      {
-                        d: "M56 28C56 43.464 43.464 56 28 56C12.536 56 0 43.464 0 28C0 12.536 12.536 0 28 0C43.464 0 56 12.536 56 28Z",
-                        fillRule: "nonzero",
-                      },
-                    ]}
-                    display="block"
-                    gap="unset"
-                    alignItems="unset"
-                    justifyContent="unset"
-                    position="absolute"
-                    top="0px"
-                    left="56px"
-                    {...getOverrideProps(overrides, "Ellipse 6142")}
-                  ></Icon>
-                </Flex>
-                <Flex
-                  gap="2px"
-                  direction="column"
-                  width="152px"
-                  height="unset"
-                  justifyContent="flex-start"
-                  alignItems="flex-start"
-                  shrink="0"
-                  position="relative"
-                  padding="0px 0px 0px 0px"
-                  {...getOverrideProps(overrides, "Frame 8143")}
-                >
-                  <Text
-                    fontFamily="Lexend"
-                    fontSize="14px"
-                    fontWeight="600"
-                    color="rgba(27,28,87,1)"
-                    lineHeight="24px"
-                    textAlign="left"
-                    display="block"
-                    direction="column"
-                    justifyContent="unset"
-                    width="unset"
-                    height="unset"
-                    gap="unset"
-                    alignItems="unset"
-                    shrink="0"
-                    alignSelf="stretch"
-                    position="relative"
-                    padding="0px 0px 0px 0px"
-                    whiteSpace="pre-wrap"
-                    children="1K+ Business Owners"
-                    {...getOverrideProps(overrides, "1K+ Business Owners")}
-                  ></Text>
-                  <Text
-                    fontFamily="Lexend"
-                    fontSize="12px"
-                    fontWeight="400"
-                    color="rgba(104,121,159,1)"
-                    lineHeight="20px"
-                    textAlign="left"
-                    display="block"
-                    direction="column"
-                    justifyContent="unset"
-                    width="unset"
-                    height="unset"
-                    gap="unset"
-                    alignItems="unset"
-                    shrink="0"
-                    alignSelf="stretch"
-                    position="relative"
-                    padding="0px 0px 0px 0px"
-                    whiteSpace="pre-wrap"
-                    children="Successfully Getting Home"
-                    {...getOverrideProps(
-                      overrides,
-                      "Successfully Getting Home"
-                    )}
-                  ></Text>
-                </Flex>
-              </Flex>
               <Flex
                 gap="16px"
                 direction="row"
@@ -1296,8 +1132,8 @@ export default function Component1(props) {
             >
               <Flex
                 padding="0px 0px 0px 0px"
-                width="340px"
-                height="382px"
+                width="111px"
+                height="34px"
                 display="block"
                 gap="unset"
                 alignItems="unset"
@@ -1306,21 +1142,6 @@ export default function Component1(props) {
                 position="relative"
                 {...getOverrideProps(overrides, "Img1132")}
               >
-                <Image
-                  width="340px"
-                  height="382px"
-                  display="block"
-                  gap="unset"
-                  alignItems="unset"
-                  justifyContent="unset"
-                  position="absolute"
-                  top="0px"
-                  left="0px"
-                  borderRadius="24px"
-                  padding="0px 0px 0px 0px"
-                  objectFit="cover"
-                  {...getOverrideProps(overrides, "Rectangle 151133")}
-                ></Image>
                 <Flex
                   gap="10px"
                   direction="row"
@@ -1329,8 +1150,8 @@ export default function Component1(props) {
                   justifyContent="flex-start"
                   alignItems="flex-start"
                   position="absolute"
-                  top="332px"
-                  left="16px"
+                  top="0px"
+                  left="0px"
                   borderRadius="32px"
                   padding="8px 16px 8px 16px"
                   backgroundColor="rgba(254,226,226,1)"
@@ -5465,31 +5286,16 @@ export default function Component1(props) {
           <View
             padding="0px 0px 0px 0px"
             width="560px"
-            height="512px"
+            height="208px"
             display="block"
             gap="unset"
             alignItems="unset"
             justifyContent="unset"
             position="absolute"
-            top="231px"
+            top="535px"
             left="640px"
             {...getOverrideProps(overrides, "Col 2")}
           >
-            <View
-              width="560px"
-              height="280px"
-              display="block"
-              gap="unset"
-              alignItems="unset"
-              justifyContent="unset"
-              position="absolute"
-              top="0px"
-              left="0px"
-              borderRadius="16px"
-              padding="0px 0px 0px 0px"
-              backgroundColor="rgba(196,196,196,1)"
-              {...getOverrideProps(overrides, "Rectangle 23")}
-            ></View>
             <Flex
               gap="16px"
               direction="column"
@@ -5498,7 +5304,7 @@ export default function Component1(props) {
               justifyContent="flex-start"
               alignItems="flex-start"
               position="absolute"
-              top="304px"
+              top="0px"
               left="0px"
               padding="0px 0px 0px 0px"
               {...getOverrideProps(overrides, "Frame 171362")}
@@ -6767,20 +6573,6 @@ export default function Component1(props) {
           objectFit="cover"
           {...getOverrideProps(overrides, "Hueman Logo 2")}
         ></Image>
-        <View
-          width="400px"
-          height="600px"
-          display="block"
-          gap="unset"
-          alignItems="unset"
-          justifyContent="unset"
-          overflow="hidden"
-          position="absolute"
-          top="930px"
-          left="120px"
-          padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "Frame 418")}
-        ></View>
       </View>
       <Image
         width="17.64%"

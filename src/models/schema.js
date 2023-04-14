@@ -272,6 +272,13 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
+                "Rate": {
+                    "name": "Rate",
+                    "isArray": false,
+                    "type": "Float",
+                    "isRequired": false,
+                    "attributes": []
+                },
                 "createdAt": {
                     "name": "createdAt",
                     "isArray": false,
@@ -944,5 +951,5 @@ export const schema = {
         }
     },
     "codegenVersion": "3.4.0",
-    "version": "0f85e1397fd1920acb177482eb20eaad"
+    "version": "c677dfc9b825e4b6270c16e8d02f65fd"
 };

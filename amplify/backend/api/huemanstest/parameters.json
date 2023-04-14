@@ -2,5 +2,5 @@
   "AppSyncApiName": "huemanstest",
   "DynamoDBBillingMode": "PAY_PER_REQUEST",
   "DynamoDBEnableServerSideEncryption": false,
-  "AuthModeLastUpdated": "2023-04-04T17:49:17.359Z"
+  "AuthModeLastUpdated": "2023-04-12T10:38:29.723Z"
 }

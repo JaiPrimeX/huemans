@@ -8,6 +8,7 @@ import About from './pages/about';
 import Profile from './pages/profile';
 import Favorites from './pages/favorites';
 import Businesses from './pages/businesses';
+import BusinessDetails from './pages/businessDetails';
 
 function App() {
 return (
@@ -15,7 +16,8 @@ return (
     <Routes>
         <Route exact path='/' element={<Home />} />
         <Route path='/about' element={<About/>} />
-        <Route path='/search' element={<Search/>} />
+        <Route path='/search' element={<Search/>}></Route>
+        <Route path="/details/:name" element={<BusinessDetails/>}/>
         <Route path='/profile' element={<Profile/>}/>
         <Route path='/favorites' element={<Favorites/>}/>
         <Route path='/businesses' element={<Businesses/>}/>

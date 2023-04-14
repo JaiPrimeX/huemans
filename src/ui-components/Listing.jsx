@@ -212,7 +212,7 @@ export default function Listing(props) {
         right="8.02%"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
-        children={businesses?.Web}
+        children={businesses?.TopReview}
         {...getOverrideProps(overrides, "Review")}
       ></Text>
       <Flex
@@ -289,7 +289,7 @@ export default function Listing(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="4.6"
+          children={businesses?.Rate}
           {...getOverrideProps(overrides, "4.6")}
         ></Text>
       </Flex>

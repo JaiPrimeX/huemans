@@ -24,7 +24,7 @@ import * as mutations from "../../../graphql/mutations";
 
 function Profile() {
   const [userProfile, setUserProfile] = React.useState(null)
-  const who = '3080c972-9daf-4010-9536-35c08c02aed3';
+  const who = '97a64680-5c6f-4844-b7be-8a36f5450e9c';
 
   const { isOpen, onOpen, onClose } = useDisclosure()
   const profileImage = React.useRef(null)

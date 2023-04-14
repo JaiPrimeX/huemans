@@ -86,6 +86,7 @@ type EagerBusinesses = {
   readonly Lng?: number | null;
   readonly TopReview?: string | null;
   readonly Header?: string | null;
+  readonly Rate?: number | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -111,6 +112,7 @@ type LazyBusinesses = {
   readonly Lng?: number | null;
   readonly TopReview?: string | null;
   readonly Header?: string | null;
+  readonly Rate?: number | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
